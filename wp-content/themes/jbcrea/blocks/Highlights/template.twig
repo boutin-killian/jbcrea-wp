@@ -1,0 +1,50 @@
+{#
+Title: Chiffres clés ou valeurs
+Description: Permet de mettre en avant un chiffre ou une valeur.
+Category: Contenu du flexible
+Icon: star-empty
+Keywords: gosselink mise en lumière highlights
+#}
+
+{% set flexi_color = function('get_field', 'color') %}
+{% set flexi_section_title = function('get_field', 'section_title') %}
+{% set flexi_key_number = function('get_field', 'key_number') %}
+
+<section class="grid-container {{ flexi_color }}">
+    <div class="grid-x grid-padding-x numbers">
+        {% if flexi_section_title %}
+            <div class="small-12">
+                <h2>{{ flexi_section_title }}</h2>
+            </div>
+        {% endif %}
+        {% for item in flexi_key_number %}
+            <div class="numbers-key large-{{ 12 / flexi_key_number|length }}">
+                {% if item.choice is empty %}
+                    <div class="count">
+                        <div class="keys">
+                            {{ item.number }}
+                        </div>
+                    </div>
+                    <div class="details">
+                        {% if item.extension %}
+                            {{ item.extension }}<br>
+                        {% endif %}
+                        {% if item.detail %}
+                            {{ item.detail }}
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <div class="image">
+                        <img src="{{ TimberImage(item.icon).src }}" alt="{{ item.icon.alt }}"/>
+                    </div>
+                    <div class="details">
+                        {% if item.detail %}
+                            {{ item.detail }}
+                        {% endif %}
+                    </div>
+
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</section>

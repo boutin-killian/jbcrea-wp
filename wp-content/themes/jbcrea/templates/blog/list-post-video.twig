@@ -1,0 +1,22 @@
+<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+    <header class="entry-header">
+        <div class="media-content">
+            <div class="videoContainer">
+                {{ post.get_field('video') }}
+            </div>
+        </div>
+        <div class="entry-meta">
+            {{ post.date }} / {{ post.category }}
+        </div>
+
+    </header>
+    <div class="entry-summary">
+        <h2 class="entry-title">{{ post.title }}</h2>
+        {{ post.content | striptags | slice(0, 25) }} [...]
+
+        <a href="{{ post.link }}" class="button link-post">Lire la suite</a>
+    </div>
+    <footer class="entry-footer">
+
+    </footer>
+</article>

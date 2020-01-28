@@ -1,0 +1,92 @@
+{#
+Title: Bloc lien
+Description: Permet d'insérer un ou plusieurs liens.
+Category: Contenu du flexible
+Icon: admin-links
+Keywords: gosselink link lien
+#}
+{% set flexi_link = function('get_field', 'link') %}
+{% set flexi_block_links_title = function('get_field', 'block_links_title') %}
+{% set flexi_description_links_block = function('get_field', 'description_links_block') %}
+
+{% set flexi_order = function('get_field', 'order') %}
+{% set flexi_wish = function('get_field', 'wish') %}
+{% set flexi_image = function('get_field', 'image') %}
+{% set flexi_img_format = function('get_field', 'img_format') %}
+{% set flexi_color = function('get_field', 'color') %}
+
+<div class="tools-links-block {{ flexi_color }}">
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x" data-equalizer data-equalize-on="medium">
+            {% if flexi_order == NULL or flexi_order == 1 %}
+
+                <div class="cell {% if flexi_wish %} small-12 large-6 {% else %} large-12 {% endif %}left">
+                    <div class="paragraph">
+                        {% if flexi_block_links_title %}
+                            <h2>{{ flexi_block_links_title }}</h2>
+                        {% endif %}
+                        <div>
+                            {% if flexi_description_links_block %}
+                                {{ flexi_description_links_block }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                {% if flexi_wish %}
+                    <div class="cell small-12 large-6 right img-block">
+                        <div class="img-content">
+                            <div class="{% if flexi_img_format %}cover{% else %}contain{% endif %}">
+                                <img src="{{ TimberImage(flexi_image).src }}" alt="{{ flexi_image.alt }}">
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+
+            {% else %}
+
+                {% if flexi_wish %}
+                    <div class="cell small-12 large-6 left img-block">
+                        <div class="img-content">
+                            <div class="{% if flexi_img_format %}cover{% else %}contain{% endif %}">
+                                <img src="{{ TimberImage(flexi_image).src }}" alt="{{ flexi_image.alt }}">
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+
+                <div class="cell {% if flexi_wish %} small-12 large-6 {% else %} large-12 {% endif %}right">
+                    <div class="paragraph">
+                        {% if flexi_block_links_title %}
+                            <h2>{{ flexi_block_links_title }}</h2>
+                        {% endif %}
+                        <div>
+                            {% if flexi_description_links_block %}
+                                {{ flexi_description_links_block }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+            {% endif %}
+
+            {% for item in flexi_link %}
+                <div class="cell small-12 medium-6 large-3 centered-blocks">
+                    <div class="link-block" data-equalizer-watch>
+                        <h4>{{ item.link_title }}</h4>
+                        {% if item.link_description %}
+                            <div class="description">
+                                {{ item.link_description }}
+                            </div>
+                        {% endif %}
+
+                        <a class="button"
+                           href="{{ item.url_link }}" {% if item.target is not empty %} target="_blank" {% endif %}>
+                            Visiter le lien
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

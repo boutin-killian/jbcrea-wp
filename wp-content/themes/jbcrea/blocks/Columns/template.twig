@@ -1,0 +1,53 @@
+{#
+Title: Texte (en colonne 1, 2, 3 ou 4)
+Description: Permet d'insérer jusqu'à 4 colonnes de textes et images.
+Category: Contenu du flexible
+Icon: editor-table
+Keywords: gosselink columns colonnes
+#}
+
+{% set flexi_color = function('get_field', 'color') %}
+{% set flexi_section_title = function('get_field', 'section_title') %}
+
+
+{% set flexi_columns = function('get_field', 'text') %}
+
+
+<div class="column-content {{ flexi_color }}">
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x" data-equalizer data-equalize-on="medium">
+            {% if flexi_section_title %}
+                <div class="cell small-12">
+                    <h2>{{ flexi_section_title }}</h2>
+                </div>
+            {% endif %}
+            {% for item in flexi_columns %}
+                <div class="cell small-12 medium-6 large-3 centered-blocks">
+                    <div class="col" data-equalizer-watch>
+                        {% if item.block_image %}
+                            <div class="img-block">
+                                <div class="img-content">
+                                    <img src="{{ TimberImage(item.block_image) }}" alt="{{ item.block_image.alt }}">
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        <div class="description-block">
+                            {% if item.block_titre %}
+                                <h3>
+                                    {{ item.block_titre }}
+                                </h3>
+                            {% endif %}
+
+                            {% if item.block_column %}
+                                <div>
+                                    {{ item.block_column }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

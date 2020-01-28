@@ -1,0 +1,36 @@
+@import '../../scss/global/vars';
+
+$base-color: #23282d;
+$text-color: #EEE;
+$icon-color: #AAA;
+$highlight-color: $gosselink-green;
+$notification-color: darken($gosselink-green, 10%);
+
+@import 'admin/admin';
+
+/* LOGIN */
+body{
+  &.login{
+
+    h1{
+      a{
+        background-image: url('../../img/logo-gosselink.svg');
+        background-size: contain;
+        width: 320px;
+        height: 117px;
+      }
+    }
+
+    #login_error,
+    .message,
+    .success {
+      border-left: 4px solid $gosselink-green;
+    }
+
+    #backtoblog a:hover,
+    #nav a:hover,
+    h1 a:hover {
+      color: $gosselink-green;
+    }
+  }
+}

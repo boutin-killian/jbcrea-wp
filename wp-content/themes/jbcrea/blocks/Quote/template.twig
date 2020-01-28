@@ -1,0 +1,17 @@
+{#
+Title: Citation
+Description: Permet d'insérer une citation.
+Category: Contenu du flexible
+Icon: editor-quote
+Keywords: gosselink quote citation
+#}
+
+{% set quote = function('get_field', 'field_gk_quote') %}
+{% set name = function('get_field', 'field_gk_name') %}
+
+<blockquote>
+    {{ quote }}
+    <cite>
+        {{ name }}
+    </cite>
+</blockquote>

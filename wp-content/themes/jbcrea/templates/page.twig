@@ -1,0 +1,19 @@
+{% extends one_page_section ? "one_page_section.twig" : "base.twig" %}
+
+{% block content %}
+
+	<section class="content-wrapper">
+
+        {% if one_page_section %}
+			<span class="h1">{{post.post_title}}</span>
+        {% else %}
+			<h1 class="h1">{{post.post_title}}</h1>
+        {% endif %}
+
+		<div class="page-content">
+            {{ post.content }}
+		</div>
+
+	</section>
+
+{% endblock %}

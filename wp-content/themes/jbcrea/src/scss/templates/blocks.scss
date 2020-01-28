@@ -1,0 +1,95 @@
+// Block "Columns"
+// Block "Accordion"
+// Block "TextImage"
+.column-content, .paragraph {
+
+  h2 {
+    font-size: rem-calc(25);
+    margin-bottom: rem-calc(30);
+  }
+
+  h3 {
+    margin-bottom: rem-calc(20);
+  }
+
+  ul, ol {
+    margin: auto 0 1em 1em;
+    padding: 0;
+    position: relative;
+    list-style-type: disc;
+
+    ul, ol {
+      margin-left: 1em;
+      margin-bottom: 0;
+      padding-left: 0;
+      list-style-type: circle;
+
+      ul, ol {
+        list-style-type: square;
+      }
+    }
+
+    li {
+      margin-left: 5em;
+      position: relative;
+      list-style-type: none;
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: $red;
+        top: .6em;
+        left: -1em;
+        border-radius: 50%;
+      }
+    }
+
+    & > li {
+      margin: 0.5em auto;
+    }
+  }
+
+  li {
+    li {
+      margin-left: 1em;
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 4px;
+        height: 4px;
+        background: lighten($gray, 10%);
+        top: .6em;
+        left: -1em;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// Block "Accordion"
+// Block "TextImage"
+// Block "Download"
+// Block "Link"
+.img-content {
+  position: relative;
+  height: 100%;
+  min-height: 450px;
+  z-index: 1;
+
+  .cover {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+
+  .contain {
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    transform: translateY(0%);
+  }
+}

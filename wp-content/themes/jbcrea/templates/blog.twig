@@ -1,0 +1,32 @@
+{% extends one_page_section ? "one_page_section.twig" : "base.twig" %}
+
+{% block content %}
+
+    <div class="grid-x grid-padding-x">
+        <div class="small-12 {% if sidebar %}medium-8{% endif %}">
+            <div class="content-wrapper">
+
+                <ul class="list-post-blog">
+                {% for post in posts %}
+                    <li>
+                        {% include 'blog/list-post-' ~ (post.format == '' ? 'default' : post.format) ~ '.twig' %}
+                    </li>
+                {% endfor %}
+                </ul>
+
+                {% include 'partial/pagination.twig' %}
+            </div>
+
+        </div>
+
+        {% if sidebar %}
+            <aside class="sidebar small-12 medium-4">
+                <ul>
+                    {{sidebar}}
+                </ul>
+            </aside>
+        {% endif %}
+
+    </div>
+
+{% endblock %}

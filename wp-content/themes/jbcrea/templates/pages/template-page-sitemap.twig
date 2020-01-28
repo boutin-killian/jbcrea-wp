@@ -1,0 +1,21 @@
+{% extends one_page_section ? "one_page_section.twig" : "base.twig" %}
+
+{% block content %}
+
+	<section class="content-wrapper">
+
+        {% if one_page_section %}
+			<span class="h1">{{post.post_title}}</span>
+        {% else %}
+			<h1 class="h1">{{post.post_title}}</h1>
+        {% endif %}
+
+		<div class="page-content">
+            {{function('do_shortcode', post.post_content)}}
+
+            {% include "partial/sitemap-menu.twig" with {'menu': sitemap_menu.get_items} %}
+		</div>
+
+	</section>
+
+{% endblock %}

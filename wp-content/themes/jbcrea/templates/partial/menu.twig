@@ -1,0 +1,25 @@
+{% if menu %}
+
+	<ul {% if mobile %}class="cssmenu"{% endif %}>
+
+        {% for item in menu %}
+
+			<li class="{{ item.classes | join(' ') }}">
+
+                {% set menu_link = item.link %}
+                {% if options.is_one_page and item.master_object.post_type == 'page' %}
+                    {% set menu_link = sections_links[item.master_object.ID] %}
+                {% endif %}
+
+				<a target="{{ item.target }}" href="{{ menu_link }}"
+                   {% if item.get_children %}aria-haspopup="true"{% endif %}>{{ item.title }}</a>
+
+                {% if item.get_children %}
+                    {% include "partial/menu.twig" with {'menu': item.get_children, 'submenu': true} %}
+                {% endif %}
+			</li>
+
+        {% endfor %}
+
+	</ul>
+{% endif %}

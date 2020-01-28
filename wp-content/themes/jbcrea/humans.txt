@@ -1,0 +1,10 @@
+## Team
+
+Gosselink, agence digitale
+http://www.gosselink.fr
+@gosselink
+
+
+## Site
+
+Software: Built with [Timber](http://upstatement.com/timber) by Upstatement

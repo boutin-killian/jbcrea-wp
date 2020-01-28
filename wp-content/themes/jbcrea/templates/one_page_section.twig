@@ -1,0 +1,19 @@
+<section id="{{ section.id }}" class="main-section {{ post.post_name }} {{ section.class }}">
+
+    <div class="page-content">
+
+        {% if section.isPopup %}
+            <button class="button close-button" data-close
+                    aria-label="Close Popup"
+                    type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        {% endif %}
+
+        {% block content %}
+
+        {% endblock %}
+
+    </div>
+
+</section>

@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<section id="home" class="content-wrapper">
+
+		<h2>THIS IS THE HOMEPAGE !</h2>
+
+		<div class="page-content">
+            {{ post.content }}
+		</div>
+
+	</section>
+
+
+	{# For One Page sites, display other sections too #}
+    {% if options.is_one_page %}
+        {% for section in sections %}
+
+			{{ section }}
+
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<div class="grid-container">
+		<div class="grid-x grid-padding-x">
+			<div class="small-12 medium-8">
+
+				{% include 'blog/post-' ~ (post.format == '' ? 'default' : post.format) ~ '.twig' %}
+
+                {% if not options.disable_comments %}
+
+					<section class="comment-box">
+
+						<div class="comments">
+                            {% if post.comments %}
+								<h3>Commentaires</h3>
+                                {% for cmt in post.comments %}
+                                    {% include "blog/comment.twig" with {comment:cmt} %}
+                                {% endfor %}
+                            {% endif %}
+						</div>
+
+                        {% if post.comment_status == "closed" %}
+							<p> Les commentaires sont désactivés pour cet article </p>
+                        {% else %}
+                            {% include "blog/comment-form.twig" %}
+                        {% endif %}
+					</section>
+
+                {% endif %}
+			</div>
+
+            {% if sidebar %}
+				<aside class="sidebar small-12 medium-4">
+                    {{ sidebar }}
+				</aside>
+            {% endif %}
+		</div>
+	</div>
+
+{% endblock %}

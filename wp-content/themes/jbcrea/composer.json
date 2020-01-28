@@ -1,0 +1,20 @@
+{
+    "name": "gosselink/wordpress-starter-theme",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Gosselink",
+            "email": "manager@gosselink.fr"
+        }
+    ],
+    "require": {
+        "tgmpa/tgm-plugin-activation": "^2.6",
+        "timber/timber": "^1.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gosselink\\": "inc/Gosselink/",
+            "Gosselink\\Blocks\\": "blocks/"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+/* YOUR OWN VARS THERE */
+@import 'global/vars';
+@import 'global/mixins';
+
+/* Foundation */
+@import 'lib/foundation';
+
+/* Components */
+@import "../../blocks/**/styles.scss";
+
+/* Libs */
+@import '~cookieconsent/build/cookieconsent.min.css';
+@import '~swiper/css/swiper.min.css';
+@import '~leaflet/dist/leaflet.css';
+
+/* YOUR OWN STYLESHEETS GO HERE */
+@import 'layout/body';
+@import 'layout/header';
+@import 'layout/social-medias';
+@import 'layout/navigation';
+@import 'templates/contact';
+@import 'templates/blog';
+@import 'templates/blocks';

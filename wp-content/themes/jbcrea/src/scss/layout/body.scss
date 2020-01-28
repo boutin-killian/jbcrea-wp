@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  //background: url('../img/background.jpg'); // Paths are relative to the main app.scss file.
+  background: $white;
+  font-family: $body-font;
+  font-size: rem-calc(15);
+  height: 100%;
+
+
+  a {
+    color: $action;
+    outline: none;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      color: lighten($action, 15);
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $body-font;
+    margin-bottom: rem-calc(20);
+    font-weight: 600;
+  }
+}
+
+#content {
+  margin-top: rem-calc(20px);
+}
+
+.main-section {
+  padding-top: rem-calc(100px);
+}
+
+.popup {
+  .main-section {
+    padding-top: 0;
+  }
+}
+
+// Foundation sticky fix
+.is-at-bottom {
+  top: 0 !important;
+}

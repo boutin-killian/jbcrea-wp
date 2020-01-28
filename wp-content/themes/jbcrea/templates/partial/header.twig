@@ -1,0 +1,42 @@
+<header class="header">
+    <div data-sticky-container>
+        <div class="title-bar" data-sticky data-options="marginTop:0;">
+            <div class="title-bar-left">
+                {% if is_home %}
+                    <h1 class="logo" role="banner">
+                        <a class="logo-link {{ options.is_one_page ? 'scrollto' }}" href="{{ site.url }}"
+                           rel="home">
+                            <img src="{{ assets }}images/white-logo.svg" alt="{{ site.name }}"/>
+                        </a>
+                    </h1>
+                {% else %}
+                    <div class="logo" role="banner">
+                        <a class="logo-link" href="{{ site.url }}" rel="home">
+                            <img src="{{ assets }}images/white-logo.svg" alt="{{ site.name }}"/>
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+            <nav id="nav-main" class="navigation show-for-large nav-main" role="navigation">
+                {% include "partial/menu.twig" with {'menu': menu.get_items} %}
+            </nav>
+        </div>
+    </div>
+
+    <div data-responsive-toggle="nav-main" data-hide-for="large">
+        <div class="off-canvas-content" data-off-canvas-content>
+            <div class="burger" data-toggle="offCanvasLeftOverlap">
+                <div class="burger-brick"></div>
+                <div class="burger-brick middle"></div>
+                <div class="burger-brick"></div>
+            </div>
+        </div>
+        <div class="hide-for-large-up">
+            <div class="off-canvas position-right" id="offCanvasLeftOverlap" data-off-canvas>
+                <div class="menuOffcanvas">
+                    {% include "partial/menu.twig" with {'menu': menu.get_items, 'mobile': true} %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

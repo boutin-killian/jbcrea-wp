@@ -1,0 +1,54 @@
+{#
+Title: Frise chronologique
+Description: Permet d'insérer une frise chronologique.
+Category: Contenu du flexible
+Icon: slides
+Keywords: gosselink timeline frise historique
+#}
+
+{% set flexi_title_timeline_section = function('get_field', 'title_timeline_section') %}
+{% set flexi_text_timeline_section = function('get_field', 'text_timeline_section') %}
+{% set flexi_timeline_block = function('get_field', 'timeline_block') %}
+
+<div class="grid-container">
+    <div class="grid-x grid-padding-x">
+        {% if flexi_title_timeline_section %}
+            <div class="cell small-12">
+                <h2>
+                    {{ flexi_title_timeline_section }}
+                </h2>
+            </div>
+        {% endif %}
+        {% if flexi_text_timeline_section %}
+            <div class="cell small-12">
+                {{ flexi_text_timeline_section }}
+            </div>
+        {% endif %}
+    </div>
+    <br>
+    <div class="cell small-12">
+        <div class="cd-container">
+            {% for item in flexi_timeline_block %}
+                <div class="cd-timeline-block">
+                    <div class="cd-timeline-img cd-picture">
+                        {% if item.dated %}
+                            {{ item.dated }}
+                        {% endif %}
+                    </div>
+                    <div class="cd-timeline-content">
+                        {% if item.event_title %}
+                            <p class="title">{{ item.event_title }}</p>
+                        {% endif %}
+                        <div class="description">
+                            {{ item.event }}
+                        </div>
+                        {% if item.event_image %}
+                            <img src="{{ TimberImage(item.event_image) }}" alt="{{ item.event_image.alt }}">
+                        {% endif %}
+                    </div>
+                </div>
+                <br><br>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      }
+    }]
+  ],
+  "plugins": [
+    ["syntax-dynamic-import"],
+    ["transform-es2015-arrow-functions"],
+    ["transform-es2015-destructuring"],
+    ["transform-es2015-spread"],
+    ["transform-object-rest-spread"]
+  ]
+}

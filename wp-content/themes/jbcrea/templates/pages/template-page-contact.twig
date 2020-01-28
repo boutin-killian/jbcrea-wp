@@ -1,0 +1,88 @@
+{% extends one_page_section ? "one_page_section.twig" : "base.twig" %}
+
+{% block content %}
+
+	<div class="grid-container">
+		<div class="grid-x grid-padding-x full-height">
+
+			<div class="left-intro small-12">
+				{% if one_page_section %}
+					<span class="h1">{{ post.post_title }}</span>
+				{% else %}
+
+					<h1 class="h1">{{ post.post_title }}</h1>
+				{% endif %}
+				{{ function('do_shortcode', post.post_content) }}
+			</div>
+
+		</div>
+	</div>
+
+	<div class="grid-container">
+		<div class="grid-x grid-padding-x">
+			<div class="small-12 medium-4 mail-block">
+				<h2>Email & Téléphone</h2>
+				<p>
+					Donec bibendum malesuada ante ut ultrices.
+				</p>
+				<ul>
+                    {% if options.phone %}
+						<li>
+                            {{ options.phone }}
+						</li>
+                        {% if options.mail %}
+							<li>
+								<a href="mailto:{{ options.mail }}" class="button red-button">Nous contacter par
+									mail</a>
+							</li>
+                        {% endif %}
+                    {% endif %}
+				</ul>
+			</div>
+
+			<div class="small-12 medium-4 address-block">
+				<h2>Adresse</h2>
+				<p>
+					Phasellus semper malesuada suscipit.
+				</p>
+				<ul>
+                    {% if options.client_address %}
+						<li>
+                            {{ options.client_address }}<br><br>
+						</li>
+                    {% endif %}
+				</ul>
+			</div>
+
+			<div class="small-12 medium-4 social-block">
+				<h2>Nous suivre</h2>
+				<p>
+					Vestibulum gravida posuere lorem eget maximus.
+				</p>
+                {% include 'partial/social-media.twig' %}
+			</div>
+		</div>
+	</div>
+
+	<div class="grid-container">
+		<div class="grid-x grid-padding-x">
+			<div class="cell small-12 large-7 form">
+				{% if options.contact_form %}
+					<h2>Remplissez le formulaire</h2>
+
+					{{ function('do_shortcode', options.contact_form) }}
+				{% endif %}
+			</div>
+			<div class="small-12 large-5">
+				{% if options.googlemap_location %}
+				<div id="contact-map" data-center-lat="{{ options.googlemap_location.lat }}"
+					 data-center-lng="{{ options.googlemap_location.lng }}">
+					<div class="marker" data-lat="{{ options.googlemap_location.lat }}"
+						 data-lng="{{ options.googlemap_location.lng }}"></div>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

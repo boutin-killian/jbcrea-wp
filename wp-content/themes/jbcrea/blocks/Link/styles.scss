@@ -1,0 +1,157 @@
+$gutter_var: rem-calc(30);
+$top-before: rem-calc(-70);
+$top-before-mobile: rem-calc(-15);
+
+.tools-links-block {
+  margin-bottom: rem-calc(30);
+
+  .centered-blocks {
+    margin: 0 auto;
+  }
+
+  @include breakpoint(large) {
+    margin-bottom: rem-calc(100);
+  }
+
+  .left, .right {
+    position: relative;
+
+    .img-content {
+      position: relative;
+      z-index: 5;
+      height: 100%;
+      min-height: 300px;
+      width: 100%;
+
+      @include breakpoint(medium) {
+        min-height: 450px;
+      }
+
+      .cover {
+        img {
+
+          @include object-fit(cover, center);
+          width: 100%;
+          height: 100%;
+          margin: auto;
+          border-radius: 10px;
+
+          @include breakpoint(large) {
+            position: relative;
+            z-index: 1;
+          }
+        }
+      }
+
+      .contain {
+        img {
+          width: 100%;
+          height: auto;
+          margin: auto;
+          border-radius: 10px;
+
+          @include breakpoint(large) {
+            position: relative;
+            z-index: 1;
+          }
+        }
+      }
+    }
+
+    .content-before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+
+      //@include breakpoint(large) {
+      //  display: block;
+      //}
+
+      &:before {
+        position: absolute;
+        content: '';
+        background-color: $dark-gray;
+        width: calc(70% - #{$gutter_var});
+        height: 100%;
+        z-index: 4;
+        opacity: .5;
+      }
+    }
+  }
+
+  .left {
+
+    .img-content {
+
+      //@include breakpoint(large) {
+      //  float: right;
+      //  max-width: 90%;
+      //}
+    }
+
+    .content-before {
+
+      &:before {
+        top: $top-before-mobile;
+        left: 0;
+
+        @include breakpoint(large) {
+          top: $top-before;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .right {
+
+    .img-content {
+      //
+      //@include breakpoint(large) {
+      //  float: left;
+      //  max-width: 90%;
+      //}
+    }
+
+    .content-before {
+
+      &:before {
+        top: $top-before-mobile;
+        right: 0;
+
+        @include breakpoint(large) {
+          top: $top-before;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .link-block {
+    margin-bottom: rem-calc(30);
+
+    .description {
+      min-height: 100%;
+    }
+
+    a {
+      &.button {
+
+        position: relative;
+        padding-left: rem-calc(42);
+
+        &:before {
+          position: absolute;
+          content: url('../img/icon-arrow-post.svg');
+          left: 4px;
+          top: 5px;
+          width: 28px;
+        }
+      }
+    }
+  }
+}
+

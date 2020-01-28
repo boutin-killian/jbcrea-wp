@@ -1,0 +1,109 @@
+{#
+Title: FAQ
+Description: Permet d'insérer un bloc FAQ.
+Category: Contenu du flexible
+Icon: excerpt-view
+Keywords: gosselink
+#}
+
+{% set flexi_order = function('get_field', 'order') %}
+{% set flexi_wish = function('get_field', 'wish') %}
+{% set flexi_color = function('get_field', 'color') %}
+{% set flexi_block_title = function('get_field', 'block_title') %}
+{% set flexi_block_intro = function('get_field', 'block_intro') %}
+{% set flexi_image = function('get_field', 'image') %}
+{% set flexi_faq_block = function('get_field', 'faq_block') %}
+{% set flexi_img_format = function('get_field', 'img_format') %}
+
+<div class="faq-block {{ flexi_color }}">
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            {% if flexi_order == NULL or flexi_order == 1 %}
+                <div class="cell {% if flexi_wish %} small-12 large-6 {% else %} large-12 {% endif %}left">
+                    <div class="paragraph">
+                        {% if flexi_block_title %}
+                            <h2>
+                                {{ flexi_block_title }}
+                            </h2>
+                        {% endif %}
+
+                        {% if flexi_block_intro %}
+                            <div>
+                                {{ flexi_block_intro }}
+                            </div>
+                        {% endif %}
+
+                        <ul class="accordion" data-accordion data-allow-all-closed="true">
+                            {% for item in flexi_faq_block %}
+                                <li class="accordion-item" data-accordion-item>
+                                    <a href="#" class="accordion-title">
+                                        {{ item.question }}
+                                    </a>
+                                    <div class="accordion-content" data-tab-content>
+                                        {{ item.answer }}
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+                {% if flexi_wish %}
+                    <div class="cell small-12 large-6 right img-block">
+                        <div class="img-content">
+                            <div class="{% if flexi_img_format %}cover{% else %}contain{% endif %}">
+                                <img src="{{ TimberImage(flexi_image).src }}" alt="{{ flexi_image.alt }}">
+                            </div>
+                        </div>
+
+                        <div class="content-before"></div>
+                    </div>
+                {% endif %}
+
+            {% else %}
+
+                {% if flexi_wish %}
+                    <div class="cell small-12 large-6 left img-block">
+                        <div class="img-content">
+                            <div class="{% if flexi_img_format %}cover{% else %}contain{% endif %}">
+                                <img src="{{ TimberImage(flexi_image).src }}" alt="{{ flexi_image.alt }}">
+                            </div>
+                        </div>
+                        <div class="content-before"></div>
+
+                    </div>
+                {% endif %}
+
+                <div class="cell {% if flexi_wish %} small-12 large-6 {% else %} large-12 {% endif %}right">
+                    <div class="paragraph">
+                        {% if flexi_block_title %}
+                            <h2>
+                                {{ flexi_block_title }}
+                            </h2>
+                        {% endif %}
+
+                        {% if flexi_block_intro %}
+                            <div>
+                                {{ flexi_block_intro }}
+                            </div>
+                        {% endif %}
+
+                        <ul class="accordion" data-accordion data-allow-all-closed="true">
+                            {% for item in flexi_faq_block %}
+                                <li class="accordion-item" data-accordion-item>
+                                    <a href="#" class="accordion-title">
+                                        {{ item.question }}
+                                    </a>
+                                    <div class="accordion-content" data-tab-content>
+                                        {{ item.answer }}
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+            {% endif %}
+        </div>
+    </div>
+</div>
