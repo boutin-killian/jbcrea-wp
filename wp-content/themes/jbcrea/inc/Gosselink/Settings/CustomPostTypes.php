@@ -20,24 +20,24 @@ class CustomPostTypes
 		//this is where you can register custom post types
 
 		$labels = array(
-			'name'                => _x( 'Slides', 'Post Type General Name', 'gosselink' ),
-			'singular_name'       => _x( 'Slide', 'Post Type Singular Name', 'gosselink' ),
-			'menu_name'           => __( 'Slides', 'gosselink' ),
-			'parent_item_colon'   => __( 'Slide parent', 'gosselink' ),
-			'all_items'           => __( 'Tous les slides', 'gosselink' ),
-			'view_item'           => __( 'Voir le slide', 'gosselink' ),
-			'add_new_item'        => __( 'Ajouter un nouveau slide', 'gosselink' ),
+			'name'                => _x( 'Projets', 'Post Type General Name', 'gosselink' ),
+			'singular_name'       => _x( 'Projet', 'Post Type Singular Name', 'gosselink' ),
+			'menu_name'           => __( 'Projets', 'gosselink' ),
+			'parent_item_colon'   => __( 'Projet parent', 'gosselink' ),
+			'all_items'           => __( 'Tous les projets', 'gosselink' ),
+			'view_item'           => __( 'Voir le projet', 'gosselink' ),
+			'add_new_item'        => __( 'Ajouter un nouveau projet', 'gosselink' ),
 			'add_new'             => __( 'Ajouter', 'gosselink' ),
-			'edit_item'           => __( 'Modifier le slide', 'gosselink' ),
-			'update_item'         => __( 'Mettre à jour le slide', 'gosselink' ),
-			'search_items'        => __( 'Rechercher un slide', 'gosselink' ),
+			'edit_item'           => __( 'Modifier le projet', 'gosselink' ),
+			'update_item'         => __( 'Mettre à jour le projet', 'gosselink' ),
+			'search_items'        => __( 'Rechercher un projet', 'gosselink' ),
 			'not_found'           => __( 'Introuvable', 'gosselink' ),
 			'not_found_in_trash'  => __( 'Introuvable dans la corbeille', 'gosselink' ),
 		);
 
 		$args = array(
-			'label'               => __( 'slides', 'gosselink' ),
-			'description'         => __( 'Slides', 'gosselink' ),
+			'label'               => __( 'projets', 'gosselink' ),
+			'description'         => __( 'Projets', 'gosselink' ),
 			'labels'              => $labels,
 			'supports'            => array( 'title', 'editor', 'thumbnail', 'author' ),
 			'taxonomies'          => array(  ),
@@ -55,12 +55,12 @@ class CustomPostTypes
 			'publicly_queryable'  => false,
 			'capability_type'     => 'page',
 			'rewrite'             => array(
-				'slug'  =>  'slides',
+				'slug'  =>  'projets',
 				'with_front' => false
 			),
 		);
 
-		register_post_type( 'slide', $args );
+		register_post_type( 'project', $args );
 	}
 
 	function register_taxonomies() {
