@@ -1,14 +1,8 @@
 <?php
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * Date: 03/09/2018
- * Time: 11:17
- */
+namespace JBCrea\Service;
 
-namespace Gosselink\Service;
-
-use Gosselink\Entity\GKPageSection;
-use Gosselink\GKSite;
+use JBCrea\Entity\GKPageSection;
+use JBCrea\GKSite;
 use Timber\Timber;
 
 class AjaxService

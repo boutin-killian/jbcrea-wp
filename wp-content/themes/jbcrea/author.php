@@ -9,7 +9,7 @@
  * @since    Timber 0.1
  */
 
-use Gosselink\Entity\GKArchive;
+use JBCrea\Entity\GKArchive;
 use Timber\Post;
 use Timber\User;
 

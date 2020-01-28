@@ -14,7 +14,7 @@
  * @since   Timber 0.2
  */
 
-use Gosselink\Entity\GKArchive;
+use JBCrea\Entity\GKArchive;
 use Timber\Post;
 
 $templates = array( 'archive.twig', 'index.twig' );

@@ -23,3 +23,5 @@ wp-content/*
 wp-content/themes/*
 !wp-content/themes/jbcrea/
 wp-content/themes/jbcrea/cache
+
+dploy.yaml

@@ -1,10 +1,10 @@
 <?php
 
-namespace Gosselink\Entity;
+namespace JBCrea\Entity;
 
-use Timber\Term;
+use Timber\PostQuery;
 
-class GKTaxonomy extends GKPost
+class GKArchive extends GKPost
 {
 
 	/**
@@ -16,7 +16,7 @@ class GKTaxonomy extends GKPost
 
 		$this->templates = $templates;
 
-		$this->addToContext('term', new Term());
+		$this->addToContext('posts', new PostQuery());
 	}
 
 }

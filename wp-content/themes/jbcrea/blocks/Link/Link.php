@@ -1,9 +1,9 @@
 <?php
 
-namespace Gosselink\Blocks\Link;
+namespace JBCrea\Blocks\Link;
 
-use Gosselink\Entity\GKBlock;
-use Gosselink\Settings\ACF\TechnicalOptions;
+use JBCrea\Entity\GKBlock;
+use JBCrea\Settings\ACF\TechnicalOptions;
 
 class Link
 {

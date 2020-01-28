@@ -1,6 +1,6 @@
 <?php
 
-namespace Gosselink\Service\Helper;
+namespace JBCrea\Service\Helper;
 
 /*
  * Watermark an image with a (preferably transparent) watermark-image.

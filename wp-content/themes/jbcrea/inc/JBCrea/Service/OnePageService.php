@@ -1,13 +1,8 @@
 <?php
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * Date: 30/08/2018
- * Time: 10:00
- */
 
-namespace Gosselink\Service;
+namespace JBCrea\Service;
 
-use Gosselink\GKSite;
+use JBCrea\GKSite;
 use Timber\Post;
 use Timber\PostQuery;
 use Timber\Timber;

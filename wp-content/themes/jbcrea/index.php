@@ -13,7 +13,7 @@
  * @since   Timber 0.1
  */
 
-use Gosselink\Entity\GKPage;
+use JBCrea\Entity\GKPage;
 
 $templates = array( 'index.twig' );
 

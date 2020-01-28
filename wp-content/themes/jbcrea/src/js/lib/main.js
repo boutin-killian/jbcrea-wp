@@ -6,7 +6,7 @@ let main = {
 
     load() {
 
-        console.log("Made with ❤ by Gosselink.");
+        console.log("Made with ❤ by JBCrea.");
 
         $(document).ready(function () {
 

@@ -1,13 +1,8 @@
 <?php
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * Date: 22/08/2019
- * Time: 10:49
- */
 
-namespace Gosselink\Service;
+namespace JBCrea\Service;
 
-use Gosselink\Entity\GKPage;
+use JBCrea\Entity\GKPage;
 use Timber\Timber;
 
 class MaintenanceService

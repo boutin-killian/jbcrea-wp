@@ -1,9 +1,9 @@
 <?php
 
-namespace Gosselink\Blocks\Columns;
+namespace JBCrea\Blocks\Columns;
 
-use Gosselink\Entity\GKBlock;
-use Gosselink\Settings\ACF\TechnicalOptions;
+use JBCrea\Entity\GKBlock;
+use JBCrea\Settings\ACF\TechnicalOptions;
 
 class Columns
 {

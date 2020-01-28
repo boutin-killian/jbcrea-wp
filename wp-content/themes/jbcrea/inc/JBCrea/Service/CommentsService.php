@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * Date: 19/10/2018
- * Time: 17:09
- */
-
-namespace Gosselink\Service;
+namespace JBCrea\Service;
 
 /**
  * Class CommentsService
- * @package Gosselink\Service
+ * @package JBCrea\Service
  *
  * Disable comments
  */

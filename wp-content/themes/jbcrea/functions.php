@@ -1,10 +1,10 @@
 <?php
 require_once get_template_directory() . '/vendor/autoload.php';
 
-use Gosselink\GKSite;
+use JBCrea\GKSite;
 use Timber\Timber;
 
-new \Gosselink\Settings\Plugins();
+new \JBCrea\Settings\Plugins();
 
 $timber = new Timber();
 

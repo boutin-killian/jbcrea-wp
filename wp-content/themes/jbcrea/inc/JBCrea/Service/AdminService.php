@@ -1,13 +1,8 @@
 <?php
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * Date: 09/08/2018
- * Time: 16:12
- */
 
-namespace Gosselink\Service;
+namespace JBCrea\Service;
 
-use Gosselink\GKSite;
+use JBCrea\GKSite;
 
 class AdminService
 {
@@ -49,7 +44,7 @@ class AdminService
 	function load_admin_theme() {
 		wp_admin_css_color(
 			'gosselink',
-			'Gosselink',
+			'JBCrea',
 			get_template_directory_uri() . '/dist/admin.min.css',
 			array('#222', '#333', '#01a29a', '#38c1ba'),
 			array()

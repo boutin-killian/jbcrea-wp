@@ -1,12 +1,6 @@
 <?php
 
-namespace Gosselink\Settings;
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * User: studio21
- * Date: 19/04/2018
- * Time: 17:27
- */
+namespace JBCrea\Settings;
 
 class CustomPostTypes
 {

@@ -1,14 +1,7 @@
 <?php
 
-namespace Gosselink\Settings\ACF;
-use Gosselink\GKSite;
-
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * User: studio21
- * Date: 19/04/2018
- * Time: 17:27
- */
+namespace JBCrea\Settings\ACF;
+use JBCrea\GKSite;
 
 class OptionsPages
 {

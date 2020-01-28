@@ -1,11 +1,6 @@
 <?php
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * Date: 17/10/2018
- * Time: 09:36
- */
 
-namespace Gosselink\Entity;
+namespace JBCrea\Entity;
 
 use Timber\Post;
 use Timber\Timber;

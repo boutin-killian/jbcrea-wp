@@ -4,7 +4,7 @@
  * Description: Page Plan du site
  */
 
-use Gosselink\Entity\GKPage;
+use JBCrea\Entity\GKPage;
 
 /**
  * Page template example.

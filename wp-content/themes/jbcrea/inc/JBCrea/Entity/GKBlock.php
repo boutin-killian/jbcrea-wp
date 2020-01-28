@@ -1,11 +1,6 @@
 <?php
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * Date: 20/01/2020
- * Time: 16:19
- */
 
-namespace Gosselink\Entity;
+namespace JBCrea\Entity;
 
 use Timber\Timber;
 
@@ -122,7 +117,7 @@ class GKBlock {
 
 		// Registering ACF Fields
 		try {
-			$classname = "\\Gosselink\\Blocks\\{$this->name}\\{$this->name}";
+			$classname = "\\JBCrea\\Blocks\\{$this->name}\\{$this->name}";
 			new $classname($this);
 		} catch (Exception $e) {
 			error_log("Block " . $this->name . " : class not found => " . $classname);

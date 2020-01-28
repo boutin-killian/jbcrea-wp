@@ -1,14 +1,7 @@
 <?php
-namespace Gosselink\Service;
+namespace JBCrea\Service;
 
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * User: studio21
- * Date: 19/04/2018
- * Time: 17:27
- */
-
-use Gosselink\GKSite;
+use JBCrea\GKSite;
 use Timber\Menu;
 use Timber\PostQuery;
 use Timber\Image;
@@ -137,7 +130,7 @@ class TwigService {
 
 		/* Filters */
 		$twig->addFilter(new \Twig_SimpleFilter('watermark',
-			['\Gosselink\Service\Helper\WatermarkTwigfilterHelper', 'watermark']
+			['\JBCrea\Service\Helper\WatermarkTwigfilterHelper', 'watermark']
 		));
 
 		return $twig;

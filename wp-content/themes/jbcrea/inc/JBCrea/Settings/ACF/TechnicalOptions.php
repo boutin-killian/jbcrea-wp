@@ -1,13 +1,8 @@
 <?php
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * Date: 23/11/2018
- * Time: 17:31
- */
 
-namespace Gosselink\Settings\ACF;
+namespace JBCrea\Settings\ACF;
 
-use Gosselink\GKSite;
+use JBCrea\GKSite;
 use Timber\Timber;
 
 class TechnicalOptions {

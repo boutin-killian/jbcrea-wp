@@ -1,8 +1,8 @@
 <?php
 
-namespace Gosselink\Blocks\SliderPage;
+namespace JBCrea\Blocks\SliderPage;
 
-use Gosselink\Entity\GKBlock;
+use JBCrea\Entity\GKBlock;
 
 class SliderPage
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Gosselink\Blocks\Quote;
+namespace JBCrea\Blocks\Quote;
 
-use Gosselink\Entity\GKBlock;
+use JBCrea\Entity\GKBlock;
 
 class Quote {
 

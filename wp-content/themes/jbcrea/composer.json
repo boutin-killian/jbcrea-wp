@@ -3,7 +3,7 @@
     "type": "project",
     "authors": [
         {
-            "name": "Gosselink",
+            "name": "JBCrea",
             "email": "manager@gosselink.fr"
         }
     ],
@@ -13,8 +13,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Gosselink\\": "inc/Gosselink/",
-            "Gosselink\\Blocks\\": "blocks/"
+            "JBCrea\\": "inc/JBCrea/",
+            "JBCrea\\Blocks\\": "blocks/"
         }
     }
 }

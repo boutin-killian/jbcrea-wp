@@ -9,7 +9,7 @@
  * @since    Timber 0.1
  */
 
-use Gosselink\Entity\GKPost;
+use JBCrea\Entity\GKPost;
 
 $page = new GKPost();
 

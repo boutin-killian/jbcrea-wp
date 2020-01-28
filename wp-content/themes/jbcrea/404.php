@@ -10,7 +10,7 @@
  */
 
 use Timber\Timber;
-use Gosselink\Entity\GKPage;
+use JBCrea\Entity\GKPage;
 
 $page = new GKPage(array(
 	'404.twig'

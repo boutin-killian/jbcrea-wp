@@ -1,8 +1,8 @@
 <?php
 
-namespace Gosselink\Blocks\Timeline;
+namespace JBCrea\Blocks\Timeline;
 
-use Gosselink\Entity\GKBlock;
+use JBCrea\Entity\GKBlock;
 
 class Timeline
 {

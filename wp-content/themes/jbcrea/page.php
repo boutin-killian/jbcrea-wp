@@ -21,8 +21,8 @@
  * @since    Timber 0.1
  */
 
-use Gosselink\Entity\GKPage;
-use Gosselink\Entity\GKOnePage;
+use JBCrea\Entity\GKPage;
+use JBCrea\Entity\GKOnePage;
 
 $templates = array( 'page.twig' );
 

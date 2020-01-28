@@ -1,13 +1,8 @@
 <?php
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * Date: 20/01/2020
- * Time: 14:20
- */
 
-namespace Gosselink\Service;
+namespace JBCrea\Service;
 
-use Gosselink\Entity\GKBlock;
+use JBCrea\Entity\GKBlock;
 
 class BlocksService
 {

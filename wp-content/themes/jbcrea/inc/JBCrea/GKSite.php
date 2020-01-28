@@ -1,28 +1,18 @@
 <?php
 
-namespace Gosselink;
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * Date: 09/08/2018
- * Time: 15:22
- *
- * The main Theme Class
- *
- */
+namespace JBCrea;
 
-namespace Gosselink;
-
-use Gosselink\Service\AdminService;
-use Gosselink\Service\AjaxService;
-use Gosselink\Service\CommentsService;
-use Gosselink\Service\BlocksService;
-use Gosselink\Service\MaintenanceService;
-use Gosselink\Service\OnePageService;
-use Gosselink\Service\SecurityService;
-use Gosselink\Service\TwigService;
-use Gosselink\Settings\CustomPostTypes;
-use Gosselink\Settings\ACF\OptionsPages;
-use Gosselink\Settings\ACF\BlogOptions;
+use JBCrea\Service\AdminService;
+use JBCrea\Service\AjaxService;
+use JBCrea\Service\CommentsService;
+use JBCrea\Service\BlocksService;
+use JBCrea\Service\MaintenanceService;
+use JBCrea\Service\OnePageService;
+use JBCrea\Service\SecurityService;
+use JBCrea\Service\TwigService;
+use JBCrea\Settings\CustomPostTypes;
+use JBCrea\Settings\ACF\OptionsPages;
+use JBCrea\Settings\ACF\BlogOptions;
 use Timber\Site;
 use Timber\Timber;
 
@@ -47,7 +37,7 @@ class GKSite extends Site {
 
 	private function initTheme() {
 
-		// Gosselink Stuff
+		// JBCrea Stuff
 		new AdminService();
 		new CustomPostTypes();
 		new TwigService($this);

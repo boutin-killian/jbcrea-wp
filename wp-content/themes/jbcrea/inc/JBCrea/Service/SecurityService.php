@@ -1,19 +1,14 @@
 <?php
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * Date: 09/08/2018
- * Time: 16:12
- */
 
-namespace Gosselink\Service;
+namespace JBCrea\Service;
 
-use Gosselink\GKSite;
+use JBCrea\GKSite;
 
 
 /**
  * Class SecurityService
  * Resposible for all the security related stuff (obviously)
- * @package Gosselink\Service
+ * @package JBCrea\Service
  */
 class SecurityService
 {

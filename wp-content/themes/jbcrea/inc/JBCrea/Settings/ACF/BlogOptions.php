@@ -1,11 +1,6 @@
 <?php
-/**
- * Created by Jerome GROSDENIER <jerome.grosdenier@gosselink.fr>
- * Date: 23/11/2018
- * Time: 16:00
- */
 
-namespace Gosselink\Settings\ACF;
+namespace JBCrea\Settings\ACF;
 
 class BlogOptions
 {

@@ -22,7 +22,7 @@ For a full PHP 5.6 compatibility, you can downgrade Twig to v1.
 
 #### Theme
 
-Theme settings can be set in `inc/Gosselink/GKSite.php` : 
+Theme settings can be set in `inc/JBCrea/GKSite.php` : 
 
 * Theme support (post formats, etc.)
 * Onepage support activated or not
