@@ -37,6 +37,7 @@ class CustomPostTypes
 			'taxonomies'          => array(  ),
 			'hierarchical'        => false,
 			'public'              => false,
+			'show_in_rest'        => true,
 			'show_ui'             => true,
 			'show_in_menu'        => true,
 			'show_in_nav_menus'   => true,
@@ -49,7 +50,7 @@ class CustomPostTypes
 			'publicly_queryable'  => false,
 			'capability_type'     => 'page',
 			'rewrite'             => array(
-				'slug'  =>  'projets',
+				'slug'  =>  'projet',
 				'with_front' => false
 			),
 		);
