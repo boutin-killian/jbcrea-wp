@@ -7,7 +7,6 @@ class CustomPostTypes
 
 	function __construct() {
 		add_action( 'init', array( $this, 'register_post_types' ) );
-		add_action( 'init', array( $this, 'register_taxonomies' ) );
 	}
 
 	function register_post_types() {
@@ -50,16 +49,11 @@ class CustomPostTypes
 			'publicly_queryable'  => false,
 			'capability_type'     => 'page',
 			'rewrite'             => array(
-				'slug'  =>  'projet',
+				'slug'  =>  'projets',
 				'with_front' => false
 			),
 		);
 
 		register_post_type( 'project', $args );
 	}
-
-	function register_taxonomies() {
-		//this is where you can register custom taxonomies
-	}
-
 }
